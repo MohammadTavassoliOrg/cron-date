@@ -10,9 +10,11 @@ export class CronsService {
     })
     async remove() {
         const timeNow:number = Date.now();
-        const threeMonthAgo:number = timeNow - (60000*43800) 
-        console.log("done");
-        return await this.peismaService.date.deleteMany();
+        const threeMonthAgo:number = timeNow - (60000*43800*3) 
+        const date = new Date(threeMonthAgo);
+        const test = await this.peismaService.date.deleteMany({where: {createdAt: {gte: date} }});
+        console.log(test);
+        
     }
 
 }
