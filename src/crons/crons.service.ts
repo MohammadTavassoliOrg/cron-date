@@ -14,7 +14,6 @@ export class CronsService {
         const date = new Date(threeMonthAgo);
         await this.peismaService.date.deleteMany({where: {createdAt: {lte: date} }}); 
     }
-
 }
 
 
