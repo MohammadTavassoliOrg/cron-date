@@ -32,4 +32,11 @@ $ docker run -itd --name cron --network=host cron:v1
 # if app is not running
 $ docker exec -it cron npm start:dev
 ```
+NOTE: before running app in docker you need to setup database on your computer
+
+## Setup Database
+```bash
+# setup prisma
+$ npx prisma migrate dev --name init
+```
 
