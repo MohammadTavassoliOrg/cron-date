@@ -13,5 +13,5 @@ datasource db {
 model date {
   id Int @default(autoincrement()) @id
   dataName String
-  createdAt DateTime @default(now())
+  createdAt DateTime 
 }
