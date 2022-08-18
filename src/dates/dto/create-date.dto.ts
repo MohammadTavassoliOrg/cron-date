@@ -5,4 +5,7 @@ export class CreateDateDto {
     @MinLength(3)
     @IsString()
     dataName: string
+
+    @IsNotEmpty()
+    createdAt: Date
 }
